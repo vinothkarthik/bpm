@@ -19,7 +19,6 @@ import com.vin.bpm.usertask.model.User;
 import com.vin.bpm.usertask.repo.UserRepository;
 import com.vin.bpm.usertask.service.UserAssignmentService;
 
-
 /**
  * Unit test for simple App.
  */
@@ -52,7 +51,7 @@ public class AppTest
 	    userAssignmentService.initiateUsers(users);	
 	}
 
-//	@Test
+	@Test
 	public void initiateFT() {
 		
 /*		
@@ -105,11 +104,24 @@ public class AppTest
 	    taskService.complete(task3.getId(),CollectionUtil.singletonMap("Approved", true));
 	    System.out.println("WFL Approved.. Task Completed ");
 	    
+	    /*Task task4 = taskService.createTaskQuery().processInstanceId(processInstance.getId()).singleResult();
+	    System.out.println("Send Message : Task Id:"+task4.getId());
+	    System.out.println("Send Message : Task Id:"+task4.getId() +" Send JMS Message");
+	    taskService.complete(task4.getId());
+	    
+	    
+	    Task task5 = taskService.createTaskQuery().processInstanceId(processInstance.getId()).singleResult();
+	    System.out.println("Receive Message : Task Id:"+task5.getId() +"|| Assignee:"+task5.getAssignee());
+	    taskService.complete(task5.getId());*/
+	    
+	    
+	    
+	    
 	}
 	
 	
 	
-	@Test
+//	@Test
 	public void initiateFTReject() {
 		
 /*		
@@ -163,9 +175,11 @@ public class AppTest
 	    System.out.println("WFL Rejected.. Task Completed ");
 	 // Ready to release	    
 	    Task task4 = taskService.createTaskQuery().processInstanceId(processInstance.getId()).singleResult();
-	    System.out.println("Ready to release : Task Id:"+task4.getId() +"|| Assignee:"+task4.getAssignee());
+	    System.out.println("Ready to release : Task Id:"+task4.getId());
 	    taskService.complete(task4.getId());
+	    System.out.println("Completed : Task Id:"+task4.getId());
 
+	    
 	 // work flow lead approved 	    
 	    Task task5 = taskService.createTaskQuery().processInstanceId(processInstance.getId()).singleResult();
 	    System.out.println("Work Flow Lead release : Task Id:"+task5.getId() +"|| Assignee:"+task5.getAssignee());
