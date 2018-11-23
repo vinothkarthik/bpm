@@ -39,7 +39,10 @@ public class AppTest
 	
 	@Autowired
 	TaskService taskService;
-	
+
+/*	@Autowired
+	ActiveMQSender activeMQSender;
+*/	
 	@Test
 	public void contextLoads() {
 	}
@@ -63,10 +66,10 @@ public class AppTest
 */	
 		String[] users = new String[]{"csmi","csmr","wfl"};
 
-		userRepository.save(new User( users[0],"csmi"));
+/*		userRepository.save(new User( users[0],"csmi"));
 		userRepository.save(new User( users[1],"csmr"));
 		userRepository.save(new User( users[2],"wfl"));
-
+*/
 		
 		Map<String, Object> variables = new HashMap<String, Object>();
 
@@ -104,7 +107,7 @@ public class AppTest
 	    taskService.complete(task3.getId(),CollectionUtil.singletonMap("Approved", true));
 	    System.out.println("WFL Approved.. Task Completed ");
 	    
-	    /*Task task4 = taskService.createTaskQuery().processInstanceId(processInstance.getId()).singleResult();
+/*	    Task task4 = taskService.createTaskQuery().processInstanceId(processInstance.getId()).singleResult();
 	    System.out.println("Send Message : Task Id:"+task4.getId());
 	    System.out.println("Send Message : Task Id:"+task4.getId() +" Send JMS Message");
 	    taskService.complete(task4.getId());
@@ -112,8 +115,8 @@ public class AppTest
 	    
 	    Task task5 = taskService.createTaskQuery().processInstanceId(processInstance.getId()).singleResult();
 	    System.out.println("Receive Message : Task Id:"+task5.getId() +"|| Assignee:"+task5.getAssignee());
-	    taskService.complete(task5.getId());*/
-	    
+	    taskService.complete(task5.getId());
+*/	    
 	    
 	    
 	    
@@ -133,10 +136,10 @@ public class AppTest
 */	
 		String[] users = new String[]{"csmi","csmr","wfl"};
 
-		userRepository.save(new User( users[0],"csmi"));
+/*		userRepository.save(new User( users[0],"csmi"));
 		userRepository.save(new User( users[1],"csmr"));
 		userRepository.save(new User( users[2],"wfl"));
-
+*/
 		
 		Map<String, Object> variables = new HashMap<String, Object>();
 

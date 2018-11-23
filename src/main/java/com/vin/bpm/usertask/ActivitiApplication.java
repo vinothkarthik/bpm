@@ -20,13 +20,12 @@ public class ActivitiApplication {
 
 	}
 	
-	
 	@Bean
 	public CommandLineRunner init(final UserAssignmentService myService) {
 
 		return new CommandLineRunner() {
 			public void run(String... strings) throws Exception {
-				userAssignmentService.initiateUsers(new String[] {"vinothi","viswar","praveenwfl"});
+				userAssignmentService.initiateUsers(new String[] {"csmi","csmr","wfl"});
 			}
 		};
 
